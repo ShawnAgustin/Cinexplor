@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cinexplor/static/css/main.5ad04116.css",
-    "main.js": "/cinexplor/static/js/main.6fc4b7d3.js",
+    "main.js": "/cinexplor/static/js/main.c2d06797.js",
     "static/media/hbo.png": "/cinexplor/static/media/hbo.bf837afb251d6acbabd4.png",
     "static/media/net.png": "/cinexplor/static/media/net.77ba64d8813d5a26e7e7.png",
     "static/media/red-hat-display-latin-700italic.woff": "/cinexplor/static/media/red-hat-display-latin-700italic.5dcf483a20efb16f620a.woff",
@@ -28,10 +28,10 @@
     "static/media/slick.woff": "/cinexplor/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cinexplor/index.html",
     "main.5ad04116.css.map": "/cinexplor/static/css/main.5ad04116.css.map",
-    "main.6fc4b7d3.js.map": "/cinexplor/static/js/main.6fc4b7d3.js.map"
+    "main.c2d06797.js.map": "/cinexplor/static/js/main.c2d06797.js.map"
   },
   "entrypoints": [
     "static/css/main.5ad04116.css",
-    "static/js/main.6fc4b7d3.js"
+    "static/js/main.c2d06797.js"
   ]
 }
