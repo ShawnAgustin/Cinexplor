@@ -19,11 +19,11 @@ function App() {
       <Navbar />
         <Routes>
           <Route exact path='/' element={<Home/>} />
-          <Route path='/id/:type/:id' element={<MoviePage />} />
-          <Route path="/movies" element={<Movies />}/>
-          <Route path='/shows' element={<TVShows />}/>
-          <Route path='/search/:id' element={<SearchPage />}/>
-          <Route path='/discover' element={<Discover />} />
+          <Route path='/cinexplor/id/:type/:id' element={<MoviePage />} />
+          <Route path="/cinexplor/movies" element={<Movies />}/>
+          <Route path='/cinexplor/shows' element={<TVShows />}/>
+          <Route path='/cinexplor/search/:id' element={<SearchPage />}/>
+          <Route path='/cinexplor/discover' element={<Discover />} />
         </Routes>
       </ Router>
     </div>
