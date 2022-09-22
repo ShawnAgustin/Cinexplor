@@ -7,7 +7,7 @@ import Movies from './components/Movies';
 import TVShows from './components/TVShows'
 import SearchPage from './components/SearchPage.jsx';
 import Discover from './components/Discover.jsx';
-import {Hashrouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 
 import React from 'react';
 
