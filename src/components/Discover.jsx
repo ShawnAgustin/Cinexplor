@@ -17,8 +17,6 @@ function Discover(props) {
     const [sort, setSort] = useLocalStorage('sort','Popularity');
     const [op, setOp] = useLocalStorage('op', 'popularity.desc');
 
-    const type = props.type;
-
     const navigate = useNavigate();
 
     const img_URL = 'https://image.tmdb.org/t/p/w92/'
@@ -33,7 +31,6 @@ function Discover(props) {
     const [provInfo, setProvInfo]= useState([]);
     // Page number
     const [page, setPage] = useState(1);
-    const [loading, setLoading]= useState(false);
 
     const [sortBy, setSortBy] = useState(sort);
     const [sortOpen, setSortOpen] = useState(false);

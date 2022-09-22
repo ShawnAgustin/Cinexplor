@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className='mainpage'>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
         <Routes>
           <Route exact path='/' element={<Home/>} />
