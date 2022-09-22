@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'typeface-red-hat-display';
 import App from './App';
-import {HashRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 require('typeface-red-hat-display');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( < React.StrictMode >
-    <Router>git
-    <App / >
+    <Router>
+        <App />
     </Router>
     
     </React.StrictMode>
