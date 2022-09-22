@@ -1,0 +1,123 @@
+.navbar-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 1em 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-container.scroll {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.5em 1.5em;
+}
+
+.logo {
+    margin-right: 3em;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.4
+}
+
+.navbar-left {
+    gap: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-right {
+    gap: 1.5em;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar-right svg {
+    position: relative;
+    top: 3px;
+    left: 20px;
+}
+
+form input {
+    background: none;
+    box-shadow: none;
+    border: 0;
+    padding: 0.7em 2em;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    color: white;
+    width: 200px;
+}
+
+form input:focus {
+    width: 500px;
+}
+
+.search-box {
+    max-height: 40vh;
+    position: absolute;
+    right: 1.5em;
+    list-style: none;
+    background: #202020;
+    border-radius: 10px;
+    z-index: 12;
+    width: 500px;
+    overflow: auto;
+    z-index: 10;
+    scrollbar-color: white;
+}
+
+.search-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.search-box::-webkit-scrollbar-thumb {
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.18);
+    background: #888;
+}
+
+.search-box img {
+    height: 100%;
+    width: 2.7em;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+.search-box .missing-image {
+    background: grey;
+    width: 45px;
+    height: 68px;
+    margin-right: 20px;
+}
+
+.search-box a {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: .1s all ease-in
+}
+
+.search-box a:hover {
+    background: #2d2d2d;
+}
+
+.search-box .info {
+    align-items: flex-start;
+}

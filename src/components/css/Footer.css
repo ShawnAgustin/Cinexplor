@@ -1,0 +1,43 @@
+.footer {
+    margin-top: auto;
+    /* background-color: rgba(0, 0, 0, 0.24); */
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.footer-title {
+    margin-left: 1.5em;
+    position: relative;
+    top: -2em;
+    color: white;
+}
+
+.topTen {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 35px;
+    margin-bottom: 20px;
+}
+
+.topTenMovie {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0px;
+    color: black;
+}
+
+.topTenMovie img {
+    position: relative;
+    border-radius: 5px;
+    height: 15em;
+    filter: drop-shadow(0px 5px 4px #00000086);
+}
+
+.topTenMovie h1 {
+    position: absolute;
+    background: #252525;
+    color: white;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 2px;
+}

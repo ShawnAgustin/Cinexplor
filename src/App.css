@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "red hat display";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    overflow: overlay;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainpage {
+    background-image: linear-gradient(45deg, #1D1B23, #322D41);
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainpage::-webkit-scrollbar {
+    width: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.mainpage::-webkit-scrollbar-thumb {
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.18);
+    background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* img {
+    border-radius: 10px;
+    /* width: 100%; */
+    /* background-image: url('noimage.png');
+    background-size: cover; */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+    /* / Change the "px" to adjust the scroll handle's border radius/ */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 6px;
+    /* / Change the "px" to adjust the scroll handle's border radius*/
 }

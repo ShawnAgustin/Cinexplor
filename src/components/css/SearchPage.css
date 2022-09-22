@@ -1,0 +1,97 @@
+.results-container {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.results-container .result-card {
+    display: flex;
+    padding: 2em 2em;
+    align-items: center;
+    width: 31%;
+    cursor: pointer;
+}
+
+.search-page p {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+}
+
+.result-card {
+    height: 20em;
+    transition: all 0.2s ease-in-out
+}
+
+.result-card:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.result-card img {
+    height: 100%;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.results-container .genres {
+    margin-left: 1em;
+}
+
+.results-container .info .title-info {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.title-info p {
+    color: white;
+}
+
+.results-container .info h2 {
+    cursor: pointer;
+}
+
+.result-card img {
+    cursor: pointer;
+    width: 11em;
+    background-image: url(noimage.png);
+    background-size: cover;
+}
+
+.results-container .info p {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.results-container .info span {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.search-page {
+    padding: 2em;
+}
+
+.search-result {
+    margin-left: 2em;
+}
