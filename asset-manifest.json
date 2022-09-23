@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.42c05425.css",
-    "main.js": "/static/js/main.0feebe05.js",
-    "static/media/hbo.png": "/static/media/hbo.bf837afb251d6acbabd4.png",
+    "main.css": "/static/css/main.91c24790.css",
+    "main.js": "/static/js/main.d29e9860.js",
+    "static/media/dplus.png": "/static/media/dplus.5eb1b3eb51ea08a2a072.png",
+    "static/media/hbo.png": "/static/media/hbo.a4469fe421250efd27f4.png",
     "static/media/net.png": "/static/media/net.77ba64d8813d5a26e7e7.png",
+    "static/media/hulu.png": "/static/media/hulu.93aa46bfb6d5eead8456.png",
     "static/media/red-hat-display-latin-700italic.woff": "/static/media/red-hat-display-latin-700italic.5dcf483a20efb16f620a.woff",
     "static/media/red-hat-display-latin-500italic.woff": "/static/media/red-hat-display-latin-500italic.bef2df58105aaaff28ae.woff",
     "static/media/red-hat-display-latin-900italic.woff": "/static/media/red-hat-display-latin-900italic.3d32e78147d40af17f36.woff",
     "static/media/red-hat-display-latin-400italic.woff": "/static/media/red-hat-display-latin-400italic.ac1a819a2f26f9d80c72.woff",
+    "static/media/ap.png": "/static/media/ap.667babaa9ea3f9fe86d5.png",
     "static/media/red-hat-display-latin-700.woff": "/static/media/red-hat-display-latin-700.c52812cf7dd80a963aad.woff",
     "static/media/red-hat-display-latin-500.woff": "/static/media/red-hat-display-latin-500.941e4a641d0d73c3a62c.woff",
     "static/media/red-hat-display-latin-400.woff": "/static/media/red-hat-display-latin-400.1349873c86d96615b72d.woff",
     "static/media/red-hat-display-latin-900.woff": "/static/media/red-hat-display-latin-900.bb93c5e0c2af233bd124.woff",
-    "static/media/hulu.png": "/static/media/hulu.576a8ba97065d456f208.png",
     "static/media/red-hat-display-latin-700italic.woff2": "/static/media/red-hat-display-latin-700italic.7108b0858b8d824afe3a.woff2",
     "static/media/red-hat-display-latin-500italic.woff2": "/static/media/red-hat-display-latin-500italic.aa1e030461f480c27b31.woff2",
     "static/media/red-hat-display-latin-900italic.woff2": "/static/media/red-hat-display-latin-900italic.afc09b19a67207c2e023.woff2",
@@ -27,11 +29,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.42c05425.css.map": "/static/css/main.42c05425.css.map",
-    "main.0feebe05.js.map": "/static/js/main.0feebe05.js.map"
+    "main.91c24790.css.map": "/static/css/main.91c24790.css.map",
+    "main.d29e9860.js.map": "/static/js/main.d29e9860.js.map"
   },
   "entrypoints": [
-    "static/css/main.42c05425.css",
-    "static/js/main.0feebe05.js"
+    "static/css/main.91c24790.css",
+    "static/js/main.d29e9860.js"
   ]
 }
