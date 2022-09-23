@@ -12,14 +12,19 @@
     width: 50vw;
 }
 
+.content-left img {
+    border-radius: 0;
+}
+
 .content-left h2 {
     font-size: 5em;
-    line-height: 80px;
+    line-height: 1.2em;
     padding-bottom: .3em;
 }
 
 .content-left p {
-    border-left: 5px solid white;
+    border-left: 5px solid grey;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 20px;
     border-radius: 5px;
     line-height: 1.7em;
@@ -36,6 +41,7 @@
 }
 
 .content-right h1 {
+    color: rgba(255, 255, 255, 0.5);
     font-size: 20px;
     font-weight: 500;
 }
@@ -43,18 +49,18 @@
 .logo-list {
     margin-top: 20px;
     display: flex;
-    align-items: center;
-    gap: 1em;
+    align-items: flex-end;
+    gap: 1.5em;
     border-radius: 5px;
 }
 
 .logo-icon {
-    width: 6em;
+    width: 5em;
 }
 
 .slide img {
     margin: 0 auto;
-    height: 100%;
+    width: 100%;
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.5)));
 }
 

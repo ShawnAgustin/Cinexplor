@@ -31,6 +31,11 @@
     border-radius: 5px;
     height: 15em;
     filter: drop-shadow(0px 5px 4px #00000086);
+    transition: all 0.1s ease-in-out;
+}
+
+.topTenMovie img:hover {
+    filter: drop-shadow(5px 8px 4px #000000a9);
 }
 
 .topTenMovie h1 {

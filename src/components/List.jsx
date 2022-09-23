@@ -30,7 +30,7 @@ function List(props){
             <h2>{name}</h2>
             <div className='list'>
                 {results.map(item => {
-                    return <div className='img-container'> <img onClick={() => {navigate(`/id/${type}/${item.id}`)}} src={imgURL+item.poster_path} alt={item.title}/></div>
+                    return <div className='img-container'> <img onClick={() => {navigate(`/id/${type}/${item.id}`)}} src={imgURL+item.poster_path} alt={item.title||item.name}/></div>
                 })}
             </div>
             </div>

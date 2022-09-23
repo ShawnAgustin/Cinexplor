@@ -128,6 +128,12 @@
 
 .other img {
     height: 231px;
+    transition: all 0.1s ease-in-out;
+}
+
+.other img:hover {
+    height: 231px;
+    transform: scale(1.05);
 }
 
 .other h1 {

@@ -189,7 +189,7 @@ async function getResults(){
     }
 
     function scrollTop() {
-        window.scrollTo(0,0);
+        window.scrollTo({top:0, behavior:'smooth'});
     }
 
     function handleSort(name){

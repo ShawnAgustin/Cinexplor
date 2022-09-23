@@ -3,6 +3,7 @@ import './css/SearchPage.css'
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { IoIosArrowUp } from 'react-icons/io';
 
 
 function SearchPage(){
@@ -22,6 +23,10 @@ function SearchPage(){
         if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
             setPage(prev => prev + 1);
         }
+    }
+
+    function scrollTop() {
+        window.scrollTo({top:0, behavior:'smooth'});
     }
 
     useEffect(()=> {
@@ -85,7 +90,7 @@ function SearchPage(){
         
             {results.map(item => {
                     try{
-                        return (
+                        return (<>
                             <div className='result-card' key={item.id} onClick={() => { navigate(`/id/${item.media_type}/${item.id}`)}}>
                                 {<img src={(url + item.poster_path)} alt='movie poster' onerror="this.src='../assets/noimage.png'"/>}
                                 <div className='info'>
@@ -110,7 +115,10 @@ function SearchPage(){
                                         })}
                                     </div>
                                 </div>
+                                
                             </div>
+                            <IoIosArrowUp className='scroll-up' onClick={scrollTop}/>
+                            </>
                             )
                     } catch {
                         return null

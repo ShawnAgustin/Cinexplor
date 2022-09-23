@@ -86,17 +86,6 @@ function TVShows() {
                         with_watch_providers: providers.join('|'),
                         with_watch_monetization_types: 'flatrate'
                     }}/>
-                <List name={"Currently airing"} type={'tv'} providers={providers} params={{
-                        api_key: '6599bc26f4ca86fd26961ad8384590da',
-                        language: 'en-US',
-                        sort_by: 'popularity.desc',
-                        watch_region: 'US',
-                        include_null_first_air_dates: false,
-                        page: 1,
-                        with_status: 0,
-                        with_watch_providers: providers.join('|'),
-                        with_watch_monetization_types: 'flatrate'
-                    }}/>
                 <List name={"Animation"} type={'tv'} providers={providers} params={{
                         api_key: '6599bc26f4ca86fd26961ad8384590da',
                         language: 'en-US',
@@ -117,6 +106,17 @@ function TVShows() {
                         watch_region: 'US',
                         include_null_first_air_dates: false,
                         page: 1,
+                        with_watch_providers: providers.join('|'),
+                        with_watch_monetization_types: 'flatrate'
+                    }}/>
+                    <List name={"Currently airing"} type={'tv'} providers={providers} params={{
+                        api_key: '6599bc26f4ca86fd26961ad8384590da',
+                        language: 'en-US',
+                        sort_by: 'popularity.desc',
+                        watch_region: 'US',
+                        include_null_first_air_dates: false,
+                        page: 1,
+                        with_status: 0,
                         with_watch_providers: providers.join('|'),
                         with_watch_monetization_types: 'flatrate'
                     }}/>

@@ -1,6 +1,7 @@
 import './css/Footer.css';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 function Footer (){
     const base_imgURL = 'http://image.tmdb.org/t/p/w154/';

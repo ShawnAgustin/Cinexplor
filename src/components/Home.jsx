@@ -84,10 +84,12 @@ function Home() {
                 </p>
               <ul className='logo-list'>
                 <img className= 'logo-icon' src={net} alt='Netflix' />
-                <img className= 'logo-icon' src={hbo} alt='HBOMax' />
-                <img className= 'logo-icon' src={hulu} alt='Hulu' />
                 <img className= 'logo-icon' src={dplus} alt ='Disney+' />
                 <img className= 'logo-icon' src={ap} alt='AmazonPrime' />
+                <img style={{width:'6em'}}className= 'logo-icon' src={hbo} alt='HBOMax' />
+                <img className= 'logo-icon' src={hulu} alt='Hulu' />
+                
+                
 
               </ul>
               

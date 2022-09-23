@@ -194,7 +194,7 @@
 }
 
 .sort-select li:hover {
-    background: #2d2d2d;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .sort-all {
@@ -205,16 +205,48 @@
     cursor: pointer;
 }
 
-.sort-all .sort-select {
-    top: 150%;
+
+/* .sort-all .sort-select {
+    top: 110%;
     border-radius: 10px;
     position: absolute;
     background: #202020;
     list-style: none;
-    padding: 0;
-    width: 9em;
+    padding: 0.4em;
+    width: 10em;
     overflow: hidden;
     z-index: 3;
+} */
+
+.sort-all .sort-select {
+    list-style: none;
+    background: #202020;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    padding: 0.8em;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 10em;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.sort-all .sort-select li {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+    padding: 0.2em;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.sort-all .sort-select li:hover {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .options-bar {
