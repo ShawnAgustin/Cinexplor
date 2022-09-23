@@ -78,7 +78,7 @@ function Home() {
       <>
         <div className='content'>
           <div className='content-left'>
-            <h2>Don’t waste <br/>time browsing!!!
+            <h2>Don’t waste <br/>time browsing.
             </h2>
               <p>Instantly find where to stream movies and shows. See what’s trending <br /> and discover something new.
                 </p>
