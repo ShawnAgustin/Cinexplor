@@ -13,8 +13,6 @@ function SearchPage(){
     const url = 'http://image.tmdb.org/t/p/w200/';
 
     const [page, setPage] = useState(1);
-    const [maxPage, setMaxPage] = useState(1);
-    const [num, setNum] = useState(0);
     const [data, setData] = useState('');
     const [genres, setGenres] = useState();
     const [genresTV, setGenresTV] = useState();
@@ -50,7 +48,6 @@ function SearchPage(){
 
         axios.get(`https://api.themoviedb.org/3/search/multi?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&query=${id}&page=${page}&include_adult=false`)
         .then(res=> {
-            setMaxPage(res.total_pages);
             setData(res.data);
             setResults(res.data.results.filter(item => {
             return item.media_type === 'tv' || item.media_type === 'movie'

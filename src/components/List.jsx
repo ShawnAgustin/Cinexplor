@@ -2,7 +2,6 @@ import './css/List.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom'
-import useLocalStorage from './useLocalStorage';
 
 
 function List(props){
@@ -11,7 +10,6 @@ function List(props){
     const prms = props.params;
     const url = `https://api.themoviedb.org/3/discover/${type}`
     const name = props.name;
-    const [prov, setProv] = useLocalStorage("prov", [8]);
 
     const navigate = useNavigate();
 

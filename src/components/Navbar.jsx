@@ -85,7 +85,7 @@ function Navbar(){
     return(
         <div className={scrolling ? 'navbar-container scroll' : 'navbar-container'} >
             <ul className='navbar-left'>
-                <a href='/'><img style={{width:'13em', marginLeft:'3em', marginRight:'2em',cursor:'pointer'}}src={cinexplor} alt='cinexplor logo'/></a>
+                <a href='/'><img style={{width:'10em', marginLeft:'3em', marginRight:'2em',cursor:'pointer'}}src={cinexplor} alt='cinexplor logo'/></a>
                 <a href='/discover'>Discover</a>
                 <a href='/shows'>TV Shows</a>
                 <a href='/movies'>Movies</a>

@@ -14,7 +14,7 @@ import React, {useState, useEffect} from 'react';
 
 function Home() {
 
-  const [isActive, setIsActive] = useState(true);
+  const [isActive] = useState(true);
   const [seconds, setSeconds] = useState(0);
 
     const NextArrow = ({onClick}) => {

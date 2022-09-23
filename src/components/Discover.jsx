@@ -4,7 +4,7 @@ import add from '../assets/add.png';
 import adddone from '../assets/adddone.png';
 import check2 from '../assets/check2.png';
 import './css/Discover.css'
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { IoIosClose, IoIosArrowUp } from 'react-icons/io';
 import { BsFillCaretDownFill } from 'react-icons/bs';
@@ -14,8 +14,8 @@ import Slider from '@mui/material/Slider';
 function Discover(props) {
 
     const [prov, setProv] = useLocalStorage("prov", [8]);
-    const [sort, setSort] = useLocalStorage('sort','Popularity');
-    const [op, setOp] = useLocalStorage('op', 'popularity.desc');
+    const [sort] = useLocalStorage('sort','Popularity');
+    const [op] = useLocalStorage('op', 'popularity.desc');
 
     const navigate = useNavigate();
 
