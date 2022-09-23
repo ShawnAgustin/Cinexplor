@@ -2,7 +2,7 @@ import Modal from './Modal';
 import axios from 'axios';
 import add from '../assets/add.png';
 import adddone from '../assets/adddone.png';
-import './css/Movie.css'
+// import './css/Movie.css'
 import {useState, useEffect} from 'react';
 import { IoIosClose, IoIosArrowUp } from 'react-icons/io';
 import useLocalStorage from './useLocalStorage';
