@@ -71,8 +71,13 @@
 }
 
 .activeSlide {
+    margin: 0 auto;
     opacity: 1;
     transition: all 400ms ease-in-out;
+}
+
+.activeSlide img {
+    margin: 0 auto;
 }
 
 .arrow {
@@ -92,7 +97,7 @@
 }
 
 .next {
-    right: -3%;
+    right: 0%;
     top: 50%;
 }
 
