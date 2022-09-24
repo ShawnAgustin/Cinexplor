@@ -188,6 +188,7 @@ async function getResults(){
 
         return () => {
             window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('keyup', handleKeyup);
         }
     }, [])
     

@@ -29,6 +29,9 @@ function TVShows() {
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyup);
+        return () => {
+            window.removeEventListener('keyup', handleKeyup)
+        }
     },[])
 
     useEffect(() => {

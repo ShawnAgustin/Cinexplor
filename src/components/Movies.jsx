@@ -31,6 +31,9 @@ function Movies() {
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyup);
+        return () => {
+            window.removeEventListener('keyup', handleKeyup)
+        }
     },[])
 
     useEffect(() => {

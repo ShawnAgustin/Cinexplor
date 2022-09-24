@@ -74,7 +74,9 @@ function SearchPage(){
         window.addEventListener('scroll', handleScroll);
         setResults([]);
 
-        return () => {window.removeEventListener('scroll', handleScroll)}
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
     }, [])
 
 
