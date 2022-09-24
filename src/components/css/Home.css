@@ -60,7 +60,6 @@
 
 .slide img {
     margin: 0 auto;
-    width: 100%;
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.5)));
 }
 
@@ -93,7 +92,7 @@
 }
 
 .next {
-    right: 0%;
+    right: -3%;
     top: 50%;
 }
 
@@ -103,5 +102,6 @@
 }
 
 .slick-slider {
-    width: 90%;
+    margin: 0 5em;
+    min-width: 50em;
 }
