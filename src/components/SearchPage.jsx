@@ -82,6 +82,7 @@ function SearchPage(){
     return(
         <div className='search-page'>
             <div className='search-result'>
+            <IoIosArrowUp className='scroll-up' onClick={scrollTop}/>
                 <h1>Search Results for: {id}</h1>
                 {results.length > 0 && <p className='total'>{data.total_results} total results</p>}
                 {results.length === 0 && <p className='total'>No results found!</p>}
@@ -117,7 +118,7 @@ function SearchPage(){
                                 </div>
                                 
                             </div>
-                            <IoIosArrowUp className='scroll-up' onClick={scrollTop}/>
+                            
                             </>
                             )
                     } catch {
