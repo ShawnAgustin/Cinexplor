@@ -169,9 +169,21 @@ async function getResults(){
         }
     }
 
+    function handleKeyup(e){
+        if (e.key === 'Escape'){
+            setOpen(false);
+            setGenresOpen(false);
+            setAgeOpen(false);
+            setYearOpen(false);
+            setSortOpen(false);
+        }
+    }
+
+
     useEffect(() => {
         getResults();
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('keyup', handleKeyup);
         setProviders(prov);
 
         return () => {

@@ -23,6 +23,16 @@ function Movies() {
 
 
 
+    function handleKeyup(e){
+        if (e.key === 'Escape'){
+            setOpen(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('keyup', handleKeyup);
+    },[])
+
     useEffect(() => {
         let ids = [8,337,9,384,15,531];
         axios.get('https://api.themoviedb.org/3/watch/providers/movie?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&watch_region=US')

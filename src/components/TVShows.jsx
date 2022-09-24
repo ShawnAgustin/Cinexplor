@@ -21,7 +21,15 @@ function TVShows() {
     // All provider info
     const [provInfo, setProvInfo]= useState([]);
 
+    function handleKeyup(e){
+        if (e.key === 'Escape'){
+            setOpen(false);
+        }
+    }
 
+    useEffect(() => {
+        window.addEventListener('keyup', handleKeyup);
+    },[])
 
     useEffect(() => {
         let ids = [8,337,9,384,15,531];

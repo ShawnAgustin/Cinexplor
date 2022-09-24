@@ -59,11 +59,11 @@
 }
 
 .slide img {
-    margin: 0 auto;
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.5)));
 }
 
 .slide {
+    margin: 0 auto;
     transform: scale(0.7);
     opacity: .5;
     transition: all 400ms ease-in-out;
@@ -71,7 +71,6 @@
 }
 
 .activeSlide {
-    margin: 0 auto;
     opacity: 1;
     transition: all 400ms ease-in-out;
 }
