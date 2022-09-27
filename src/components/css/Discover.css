@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 50px;
 }
 
 .selected {
@@ -63,11 +64,10 @@
 }
 
 .results {
-    padding-top: 1em;
+    margin-top: 1em;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -75,12 +75,11 @@
 }
 
 .results .title-card {
-    width: 18%;
+    min-width: 300px;
     position: relative;
     background-image: url(noimage.png);
     background-size: contain;
     overflow: hidden;
-    /* transition: border .3s ease-in-out; */
 }
 
 .results .title-card:hover {
@@ -168,6 +167,7 @@
 .center .content {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 .sort {
@@ -176,8 +176,8 @@
     user-select: none;
     position: relative;
     display: flex;
-    width: 92.5vw;
-    margin: 0 auto;
+    width: 100%;
+    /* margin: 0 auto; */
 }
 
 .sort p {

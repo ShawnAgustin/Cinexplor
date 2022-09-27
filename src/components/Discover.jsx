@@ -397,7 +397,7 @@ async function getResults(){
                 <div className='results'>
                     {results.map(item => {
                         return <div className='title-card' onClick={() => { navigate(`/id/${item.media_type}/${item.id}`) }}>
-                                <img key={item.id} src={base_imgURL + item.poster_path} alt='poster' loading='Lazy'/>
+                                <img key={item.id} src={base_imgURL + item.poster_path} alt='' loading='Lazy'/>
                                 <div className="info">
                                 {(item.media_type === 'movie') && <><p>{item.release_date.slice(0,4)}</p>
                                     <h2>{item.title}</h2>
