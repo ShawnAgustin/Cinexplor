@@ -4,9 +4,12 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoIosArrowUp } from 'react-icons/io';
+import useAxios from './useAxios';
 
 function SearchPage() {
     let { id } = useParams();
+
+    const { get } = useAxios();
 
     const navigate = useNavigate();
 
@@ -84,6 +87,14 @@ function SearchPage() {
     }, [page]);
 
     useEffect(() => {
+        get('https://api.themoviedb.org/3/search/multi', {
+            params: {
+                api_key: '6599bc26f4ca86fd26961ad8384590da',
+                language: 'en-US',
+                query: id,
+                page: 1,
+            },
+        });
         setPage(1);
         window.addEventListener('scroll', handleScroll);
         setResults([]);
