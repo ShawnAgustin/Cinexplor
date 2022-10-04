@@ -1,13 +1,12 @@
-import {useParams} from 'react-router-dom';
-import './css/SearchPage.css'
+import { useParams } from 'react-router-dom';
+import './css/SearchPage.css';
 import axios from 'axios';
-import {useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IoIosArrowUp } from 'react-icons/io';
 
-
-function SearchPage(){
-    let {id} = useParams();
+function SearchPage() {
+    let { id } = useParams();
 
     const navigate = useNavigate();
 
@@ -19,55 +18,70 @@ function SearchPage(){
     const [genresTV, setGenresTV] = useState();
     const [results, setResults] = useState([]);
 
-    function handleScroll(){
-        if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
-            setPage(prev => prev + 1);
+    function handleScroll() {
+        if (
+            window.innerHeight + document.documentElement.scrollTop + 1 >=
+            document.documentElement.scrollHeight
+        ) {
+            setPage((prev) => prev + 1);
         }
     }
 
     function scrollTop() {
-        window.scrollTo({top:0, behavior:'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         setPage(1);
-        axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US')
-        .then(res => {
-            let gen = {};
-            let toMap = res.data.genres;
-            toMap.forEach(item => {
-                gen[item.id] = item.name;
-            })
-            setGenres(gen);
-        })
-        axios.get('https://api.themoviedb.org/3/genre/tv/list?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US')
-        .then(res => {
-            let gen = {};
-            let toMap = res.data.genres;
-            toMap.forEach((item) => {
-                gen[item.id] = item.name;
-            })
-            
-            setGenresTV(gen);
-        })
+        axios
+            .get(
+                'https://api.themoviedb.org/3/genre/movie/list?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US'
+            )
+            .then((res) => {
+                let gen = {};
+                let toMap = res.data.genres;
+                toMap.forEach((item) => {
+                    gen[item.id] = item.name;
+                });
+                setGenres(gen);
+            });
+        axios
+            .get(
+                'https://api.themoviedb.org/3/genre/tv/list?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US'
+            )
+            .then((res) => {
+                let gen = {};
+                let toMap = res.data.genres;
+                toMap.forEach((item) => {
+                    gen[item.id] = item.name;
+                });
 
-        axios.get(`https://api.themoviedb.org/3/search/multi?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&query=${id}&page=${page}&include_adult=false`)
-        .then(res=> {
-            setData(res.data);
-            setResults(res.data.results.filter(item => {
-            return item.media_type === 'tv' || item.media_type === 'movie'
+                setGenresTV(gen);
+            });
+
+        axios
+            .get(
+                `https://api.themoviedb.org/3/search/multi?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&query=${id}&page=${page}&include_adult=false`
+            )
+            .then((res) => {
+                setData(res.data);
+                setResults(
+                    res.data.results.filter((item) => {
+                        return item.media_type === 'tv' || item.media_type === 'movie';
                     })
-        )})
-        .catch(err=> console.log(err));
-    },[id])
+                );
+            })
+            .catch((err) => console.log(err));
+    }, [id]);
 
-    useEffect(()=> {
-            axios.get(`https://api.themoviedb.org/3/search/multi?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&query=${id}&page=${page}&include_adult=false`)
-                .then(res=> setResults([...results, ...res.data.results]))
-                .catch(err=> console.log(err.message))
-            
-
-    },[page])
+    useEffect(() => {
+        axios
+            .get(
+                `https://api.themoviedb.org/3/search/multi?api_key=6599bc26f4ca86fd26961ad8384590da&language=en-US&query=${id}&page=${page}&include_adult=false`
+            )
+            .then((res) => setResults([...results, ...res.data.results]))
+            .catch((err) => console.log(err.message));
+    }, [page]);
 
     useEffect(() => {
         setPage(1);
@@ -75,64 +89,73 @@ function SearchPage(){
         setResults([]);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-
-
-    return(
+    return (
         <div className='search-page'>
             <div className='search-result'>
-            <IoIosArrowUp className='scroll-up' onClick={scrollTop}/>
+                <IoIosArrowUp className='scroll-up' onClick={scrollTop} />
                 <h1>Search Results for: {id}</h1>
                 {results.length > 0 && <p className='total'>{data.total_results} total results</p>}
                 {results.length === 0 && <p className='total'>No results found!</p>}
             </div>
-        <div className='results-container'>
-        
-            {results.map(item => {
-                    try{
-                        return (<>
-                            <div className='result-card' key={item.id} onClick={() => { navigate(`/id/${item.media_type}/${item.id}`)}}>
-                                {<img src={(url + item.poster_path)} alt='movie poster' onerror="this.src='../assets/noimage.png'"/>}
-                                <div className='info'>
-                                    <div className='title-info'>
-                                        {item.media_type === 'movie' && <span>{item.release_date.substring(0,4)}</span>}
-                                        {item.media_type === 'tv' && <span>{item.first_air_date.substring(0,4)}</span>}
-                                        <h2>{item.title}{item.name}</h2>
-                                        {item.media_type === 'movie' && <p>Movie</p>}
-                                        {item.media_type === 'tv' && <p>TV Show</p>}
-                                    </div>
-                                    <div className="genres">
-                                        {item.genre_ids.map((gen, idx) => {
-                                            if (idx >= 3){
-                                                return <div></div>
-                                            }
-                                            if (item.media_type === 'movie'){
-                                                return <li key={item.id}>{genres[gen]}</li>
-                                            } else {
-                                                return <li key={item.id}>{genresTV[gen]}</li>
-                                            }
-                                            
-                                        })}
+            <div className='results-container'>
+                {results.map((item) => {
+                    try {
+                        return (
+                            <React.Fragment key={item.id}>
+                                <div
+                                    className='result-card'
+                                    onClick={() => {
+                                        navigate(`/id/${item.media_type}/${item.id}`);
+                                    }}>
+                                    {
+                                        <img
+                                            src={url + item.poster_path}
+                                            alt='movie poster'
+                                            onerror="this.src='../assets/noimage.png'"
+                                        />
+                                    }
+                                    <div className='info'>
+                                        <div className='title-info'>
+                                            {item.media_type === 'movie' && (
+                                                <span>{item.release_date.substring(0, 4)}</span>
+                                            )}
+                                            {item.media_type === 'tv' && (
+                                                <span>{item.first_air_date.substring(0, 4)}</span>
+                                            )}
+                                            <h2>
+                                                {item.title}
+                                                {item.name}
+                                            </h2>
+                                            {item.media_type === 'movie' && <p>Movie</p>}
+                                            {item.media_type === 'tv' && <p>TV Show</p>}
+                                        </div>
+                                        <div className='genres'>
+                                            {item.genre_ids.map((gen, idx) => {
+                                                if (idx >= 3) {
+                                                    return <div></div>;
+                                                }
+                                                if (item.media_type === 'movie') {
+                                                    return <li key={item.id}>{genres[gen]}</li>;
+                                                } else {
+                                                    return <li key={item.id}>{genresTV[gen]}</li>;
+                                                }
+                                            })}
+                                        </div>
                                     </div>
                                 </div>
-                                
-                            </div>
-                            
-                            </>
-                            )
+                            </React.Fragment>
+                        );
                     } catch {
-                        return null
+                        return null;
                     }
-                    
-                
-                
-            })}
+                })}
+            </div>
         </div>
-        </div>
-    )
+    );
 }
 
-export default SearchPage
+export default SearchPage;
