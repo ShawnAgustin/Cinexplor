@@ -176,15 +176,15 @@ function Modal({ open, onClose, setProviders, providers }) {
     )
   }
 
-  useEffect(() => {
-    keys.forEach((item) => {
-      if (providers.includes(item)) {
-        key[item][1](true)
-      } else {
-        key[item][1](false)
-      }
-    })
-  }, [providers, keys, key])
+  // useEffect(() => {
+  //   keys.forEach((item) => {
+  //     if (providers.includes(item)) {
+  //       key[item][1](true)
+  //     } else {
+  //       key[item][1](false)
+  //     }
+  //   })
+  // }, [providers, keys, key])
 
   useEffect(() => {
     if (netflix || disney || amazon || hbo || hulu || pplus) {
