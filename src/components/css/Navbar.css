@@ -130,9 +130,6 @@ form input:focus {
 }
 
 @media screen and (max-width: 750px) {
-    * {
-        width: 100%;
-    }
     .navbar-container {
         background: black;
         width: 100%;
@@ -160,6 +157,10 @@ form input:focus {
         position: relative;
         top: 34px;
         left: -145px;
+    }
+
+    .navbar-right {
+        display: none;
     }
 }
 
