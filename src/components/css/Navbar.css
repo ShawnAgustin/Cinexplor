@@ -164,6 +164,10 @@ form input:focus {
     }
 }
 
-.navbar-container a.active {
+.navbar-container a {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-container a.active {
+    color: rgba(255, 255, 255, 1);
 }
